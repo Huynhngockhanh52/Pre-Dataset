@@ -1,0 +1,20 @@
+Chú ý: Các địa chỉ của từng Node sẽ được lưu lại trong máy, để thuận tiện, ta ký hiệu địa chỉ của Node sẽ là Dc<1>: Địa chỉ Node <1>
+RootNode: [
+    ChildD=dict("1":Dc<1>; "8": Dc<8>; "6": Dc<6>), 
+    depth=0, 
+    digitOrtoken=None
+]
+
+<1>: [
+    ChilD=dict("STARTUP_MSG:":Dc<STARTUP_MSG:>; "jetty<*>": Dc<jetty<*>>; "SHUTDOWN_MSG:": Dc<SHUTDOWN_MSG:>),
+    depth=1,
+    digitOrtoken=1
+]
+
+<STARTUP_MSG>:: [
+    Child=[LogCluster(STARTUP_MSG:)],
+    depth=2,
+    digitOrtoken="<STARTUP_MSG>:"
+]
+
+

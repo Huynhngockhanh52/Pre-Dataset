@@ -1,0 +1,5 @@
+Nguồn dữ liệu log sử dụng:
+    - https://zenodo.org/records/1596245
+    - https://zenodo.org/records/7439296
+    - https://www.kaggle.com/datasets/inzamulhoque/log-dataset
+
