@@ -12,9 +12,24 @@ RootNode: [
 ]
 
 <STARTUP_MSG>:: [
-    Child=[LogCluster(STARTUP_MSG:)],
+    Child=[LogCluster(STARTUP_MSG:), ...],
     depth=2,
     digitOrtoken="<STARTUP_MSG>:"
 ]
 
 
+
+Đối với phân cụm log, chúng ta sửa lại class thành Logcluster3 và sẽ có các trường như sau, thêm vào 3 trường mới gồm levelL, idTemplate, idLevelTemp:
+    - `logTemplate`: Template đặc trưng đại diện cho nhóm log đó, ["The1", "the2", ...]
+    - `logIDL`     : Danh sách các ID message log thuộc nhóm log trên, [1,2,3,4,5, ...] 
+    - `levelL`     : Danh sách các Level (INFO, WARN, FATAL, ERROR) mà nhóm log có thể biểu diễn, ["WARN", "INFO", ...]
+    - `idTemplate` : Mã định danh của template đó, có thể bị thay đổi do template.
+    - `idLevelTemp`: Xác định mã định danh theo dạng {"INFO": "L1", ...} 
+
+<temp1>: [
+    logTemplate=["BLOCK*", "NameSystem.addStoredBlock:", "blockMap", "updated:", "<*>", "is", "added", "to", "<*>", "size", "<*>"],
+    logIDL=[12,46,64,78,86,123,156,...],
+    levelL=["INFO", "WARN"],
+    idTemplate="5d5de21c",
+    idLevelTemp={"TEMP": "L5", "WARN": "W1", "INFO":"L9"}
+]

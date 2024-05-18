@@ -1,0 +1,15 @@
+Mục đích:
+    - Gán các ID template thành các mã định danh dễ hiểu hơn, L1, W1, ...
+    - Chứng minh có sự trùng lặp giữa các template khi biểu diễn.
+
+Đầu tiên, trong class Drain2, ta thực hiện thêm vào 03 tham số sau:
+    + rootNode          : Đối tượng Node gốc của cây phân tích trong quá trình thực hiện
+    + groupLogClustL    : Danh sách các nhóm log được thu thập từ các file log trước đó, với kiểu dữ liệu là Logcluster2, trong đó chỉ có các thuộc tính như: logTemplate, logLevel và totalOccurrences.
+    + list_logClust     : Danh sách các nhóm log (Logcluster2) được thu thập từ các file trước.
+
+Chỉnh sửa phương thức parser trong Drain:
+    - Chuẩn bị các biến hoạt động:
+        + Gán giá trị cho rootNode, logCluL.
+        + Thêm các template đã lấy từ trước vào list templateLogCluL, và reset các giá trị của các đối tượng Logcluster2 trong logCluL
+    - Load dữ liệu vào DataFrame
+    - 
